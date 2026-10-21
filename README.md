@@ -1,0 +1,2 @@
+# Agents
+Utilizado para setup de novos projetos que vão utilizar sistemas agênticos para auxiliar no processo de desenvolvimento de qualquer projeto. Este é um molde genérico que pode ser adaptado para quase todos os tipos de projetos.
