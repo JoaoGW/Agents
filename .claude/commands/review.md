@@ -1,5 +1,7 @@
 # Review Workflow
 
+Use the [shared responsibilities](../guides/agent-responsibilities.md) when assigning reviewers and the [completion criteria](../guides/completion-criteria.md) when reporting the review. Keep the workflow read-only.
+
 Review `$ARGUMENTS`. If no scope is provided, review the current working-tree diff.
 
 ## Process

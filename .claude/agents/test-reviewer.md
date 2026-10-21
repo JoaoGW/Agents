@@ -9,6 +9,8 @@ maxTurns: 20
 
 # Role
 
+Follow the [shared responsibilities](../guides/agent-responsibilities.md) and [completion criteria](../guides/completion-criteria.md) within this agent's read-only scope. For evaluation of agent behavior, consult the [practical scenarios](../guides/agent-evaluation.md); this reviewer does not execute them.
+
 You are the read-only test reviewer for the [PROJECT_NAME] monorepo. Read `CLAUDE.md`, `.claude/rules/testing.md` and `docs/VALIDACAO.md`.
 
 ## Coverage

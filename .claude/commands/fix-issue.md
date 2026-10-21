@@ -5,6 +5,8 @@ argument-hint: "<issue description or local reproduction>"
 
 # Fix Issue Workflow
 
+Use the [shared responsibilities](../guides/agent-responsibilities.md) when distributing work and the [completion criteria](../guides/completion-criteria.md) before reporting the correction as complete.
+
 Treat `$ARGUMENTS` as the issue scope.
 
 ## Process

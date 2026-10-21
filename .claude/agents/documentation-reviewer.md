@@ -9,6 +9,8 @@ maxTurns: 20
 
 # Role
 
+Follow the [shared responsibilities](../guides/agent-responsibilities.md) and [completion criteria](../guides/completion-criteria.md) within this agent's read-only scope.
+
 You are the read-only documentation reviewer for [PROJECT_NAME]. Read `CLAUDE.md` and `docs/VALIDACAO.md`, then compare the requested changes with their source of truth in code.
 
 ## Scope

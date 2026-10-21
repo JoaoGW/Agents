@@ -2,6 +2,8 @@
 
 Leia `docs/VALIDACAO.md` e as regras de `.claude/rules/testing.md`.
 
+Aplique as [responsabilidades dos agentes](../guides/agent-responsibilities.md) ao distribuir revisões e os [critérios de conclusão](../guides/completion-criteria.md) ao relatar a validação. Confira a existência dos scripts e pré-requisitos antes de usar os comandos abaixo; registre os que não puderem ser executados. Para validar o comportamento do setup, use [evaluate-agents](evaluate-agents.md).
+
 1. Inspecione o diff e identifique as camadas afetadas.
 2. Use `bash scripts/test.sh unit` para regras, tipos, lint e testes das duas camadas.
 3. Use `bash scripts/test.sh ui` para regressões de interface com API simulada.
