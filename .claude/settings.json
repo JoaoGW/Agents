@@ -7,7 +7,6 @@
   },
   "permissions": {
     "defaultMode": "default",
-    "disableAutoMode": "disable",
     "disableBypassPermissionsMode": "disable",
     "blockReadsOutsideWorkingDirectories": true,
     "allow": [
