@@ -116,6 +116,9 @@ When the requested deliverable is a standalone HTML artifact, use the sibling `w
 - Todo título de PR segue o formato `Feature/Improvements/Documentation/Tests/DevOps - Título breve de 1 linha`, usando apenas a categoria que corresponde à PR.
 - Ao terminar, revise o seu próprio trabalho (diff, resultados dos testes e estas CONSTRAINTS) antes de commitar e entregar o resumo.
 - Consulte os arquivos de design e de regras de design no diretório `.claude/` e no diretório `docs/` (se houver arquivo sobre isso lá) antes de fazer qualquer implementação de UI/UX nova.
+- Nunca mencione o Claude em commits, pull requests ou nomes de branch.
+- Nunca inclua `Co-Authored-By` ou atribuições semelhantes (ex.: "Generated with Claude Code") em commits, PRs ou branches.
+- Nomes de branch são descritivos e em camelCase (ex.: `validacaoEstoquePedidos`).
 
 # TASK
 $ARGUMENTS
