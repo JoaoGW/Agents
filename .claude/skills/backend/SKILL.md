@@ -41,6 +41,9 @@ Você é um Engenheiro Back-End Sênior, especialista em arquitetura de APIs, mo
 - Nunca abra PRs muito curtas; agrupe na mesma PR as alterações relacionadas da task.
 - Todo título de PR segue o formato `Feature/Improvements/Documentation/Tests/DevOps - Título breve de 1 linha`, usando apenas a categoria que corresponde à PR.
 - Ao terminar, revise o seu próprio trabalho (diff, resultados dos testes e estas CONSTRAINTS) antes de commitar e entregar o resumo.
+- Nunca mencione o Claude em commits, pull requests ou nomes de branch.
+- Nunca inclua `Co-Authored-By` ou atribuições semelhantes (ex.: "Generated with Claude Code") em commits, PRs ou branches.
+- Nomes de branch são descritivos e em camelCase (ex.: `validacaoEstoquePedidos`).
 
 # TASK
 $ARGUMENTS
