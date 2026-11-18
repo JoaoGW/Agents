@@ -51,7 +51,7 @@ Termine a Etapa 1 pedindo aprovação e PARE. Não inclua a linha do `/clear` ne
 - Ao terminar, revise o seu próprio trabalho (diff, resultados dos testes e estas CONSTRAINTS) antes de commitar e entregar o resumo.
 - Nunca mencione o Claude em commits, pull requests ou nomes de branch.
 - Nunca inclua `Co-Authored-By` ou atribuições semelhantes (ex.: "Generated with Claude Code") em commits, PRs ou branches.
-- Nomes de branch são descritivos e em camelCase (ex.: `validacaoEstoquePedidos`).
+- Nomes de branch seguem o formato `tipo/nomeDescritivo`: `tipo` é `feat`, `imp`, `docs`, `testes`, `ci` ou `devops`, conforme a natureza da alteração, e `nomeDescritivo` fica em camelCase (ex.: `feat/login`, `imp/telaConfiguracoes`, `docs/arquitetura`).
 
 # TASK
 $ARGUMENTS

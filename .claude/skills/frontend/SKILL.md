@@ -119,7 +119,7 @@ When the requested deliverable is a standalone HTML artifact, use the sibling `w
 - Valide toda alteração de UI/UX no navegador integrado ou no emulador integrado, tirando prints e conferindo o resultado a cada ajuste. Use o iPhone 15 (6,1 polegadas; 393×852 no navegador) como tamanho de referência nos testes.
 - Nunca mencione o Claude em commits, pull requests ou nomes de branch.
 - Nunca inclua `Co-Authored-By` ou atribuições semelhantes (ex.: "Generated with Claude Code") em commits, PRs ou branches.
-- Nomes de branch são descritivos e em camelCase (ex.: `validacaoEstoquePedidos`).
+- Nomes de branch seguem o formato `tipo/nomeDescritivo`: `tipo` é `feat`, `imp`, `docs`, `testes`, `ci` ou `devops`, conforme a natureza da alteração, e `nomeDescritivo` fica em camelCase (ex.: `feat/login`, `imp/telaConfiguracoes`, `docs/arquitetura`).
 
 # TASK
 $ARGUMENTS
