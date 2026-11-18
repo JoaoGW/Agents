@@ -20,9 +20,7 @@
     "ask": [
         "Bash(npm install *)",
         "Bash(npm uninstall *)",
-        "Bash(npm update *)",
-        "Bash(git commit *)",
-        "Bash(git push *)"
+        "Bash(npm update *)"
     ],
     "deny": [
       "Read(./.env)",

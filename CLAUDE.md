@@ -41,6 +41,10 @@ Use this file as a routing map. Do not add `@` imports for rules or large docume
 | Defect investigation and correction workflow | `.claude/commands/fix-issue.md` |
 | Standalone, shareable HTML artifacts | `.claude/skills/web-artifacts-builder/SKILL.md` |
 | Deployment readiness checks | `.claude/skills/deploy/SKILL.md` |
+| Front-end role (`/frontend`, uses `design.md`) | `.claude/skills/frontend/SKILL.md` |
+| Back-end role (`/backend`) | `.claude/skills/backend/SKILL.md` |
+| DevOps role (`/devops`) | `.claude/skills/devops/SKILL.md` |
+| QA role: review and tests only (`/qa`) | `.claude/skills/qa/SKILL.md` |
 | Focused implementation review | `.claude/agents/code-reviewer.md` |
 | Focused security review | `.claude/agents/security-auditor.md` |
 | Test coverage and E2E review | `.claude/agents/test-reviewer.md` |
@@ -112,6 +116,7 @@ For a bug, reproduce it with a test when practical before fixing it.
 
 - Never read, print, commit, or modify secrets, `.env` files, tokens, or credentials.
 - Never commit, push, publish, deploy, create external resources, or update external services without explicit approval.
+  Exception: the role skills (`/backend`, `/frontend`, `/devops`, `/qa`) commit, push their own branch and open pull requests with `gh` without asking, following the commit and PR rules in their CONSTRAINTS. Pushes to `main`/`master`, force-pushes and deploys remain blocked.
 - Never use destructive commands such as recursive deletion, `git clean`, or `git reset --hard`.
 - Run a review or security audit when a change affects authentication, authorization, external input, API contracts, dependencies, or sensitive data.
 
