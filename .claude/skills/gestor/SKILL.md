@@ -51,7 +51,8 @@ Trabalhe sempre em três etapas:
 - Títulos curtos e no imperativo (ex.: "Implementar validação de estoque no POST /orders").
 - Se a TASK estiver vazia ou ambígua a ponto de mudar o resultado, pergunte antes de começar.
 - Nunca mencione o Claude nem inclua `Co-Authored-By` ou atribuições semelhantes em tasks, descrições ou comentários do Jira/ClickUp.
-- Ao terminar, revise o seu próprio trabalho (operações aplicadas no board e estas CONSTRAINTS) antes de entregar o resumo.
+- Comunique-se com os outros devs e engenheiros (agentes e sessões) que trabalham neste mesmo projeto: mandem mensagens uns aos outros (ex.: `ListAgents` e `SendMessage`) para avisar o que cada um está fazendo, alinhar contratos e interfaces e ficar a par do trabalho dos demais. Não envie mensagens a sessões de outros projetos.
+- Antes de dar a task como concluída, valide uma a uma todas as regras deste arquivo (CONSTRAINTS e OUTPUT) contra o que você fez: operações aplicadas no board, labels, status e assignees. Corrija o que estiver violado e inclua no resumo uma checklist curta com o status de cada regra. Só então escreva a linha final.
 
 # TASK
 $ARGUMENTS

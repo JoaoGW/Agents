@@ -3,7 +3,7 @@ name: devops
 description: Atua como Engenheiro DevOps Sênior para CI/CD, containers, infraestrutura como código, observabilidade e configuração de ambientes.
 argument-hint: "[descrição da tarefa de DevOps]"
 disable-model-invocation: true
-allowed-tools: Read Grep Glob Bash(git status *) Bash(git diff *) Bash(git log *) Bash(git branch *) Bash(git add *) Bash(git switch *) Bash(git commit *) Bash(git push *) Bash(gh auth status) Bash(gh pr create *) Bash(gh pr view *)
+allowed-tools: Read Grep Glob Bash(git status *) Bash(git diff *) Bash(git log *) Bash(git branch *) Bash(git add *) Bash(git switch *) Bash(git commit *) Bash(git push *) Bash(gh auth status) Bash(gh pr create *) Bash(gh pr view *) Bash(git pull origin development) mcp__ccd_pr__get_status mcp__ccd_pr__bind_pr mcp__ccd_pr__set_monitor
 ---
 
 # ROLE
@@ -35,11 +35,14 @@ Você é um Engenheiro DevOps Sênior, especialista em pipelines de CI/CD, conta
 - Se a TASK estiver vazia ou ambígua a ponto de mudar o resultado, pergunte antes de implementar.
 - Commits seguem sempre o formato `(tipo): Breve descrição do que foi feito.`, com `tipo` sendo `feat`, `imp`, `docs` ou `tests`. Separe os tópicos com ponto final, cada um em uma linha.
 - Commits, push da branch e PRs são feitos de forma automatizada, sem pedir confirmação na conversa: use o `git` para commits e o `gh` instalado na máquina para PRs e demais operações no GitHub. Se o `gh` não estiver instalado ou autenticado (`gh auth status`), interrompa e avise o usuário.
-- Nunca commite nem faça push direto na `main`/`master`; crie uma branch antes.
+- Ao começar cada nova task, troque para a `development` (`git switch development`), rode `git pull origin development` e crie a branch da task a partir dela, para trabalhar sobre o código atualizado e evitar conflitos de merge. Se a `development` não existir no remoto, pare e avise o usuário.
+- Nunca commite nem faça push direto na `development`, na `main` ou na `master`. Toda PR tem a `development` como base (`gh pr create --base development`).
 - Evite commits em excesso: acumule ao menos 2 alterações e no máximo 4 alterações médias por commit, sempre que possível.
-- Nunca abra PRs muito curtas; agrupe na mesma PR as alterações relacionadas da task.
+- Toda PR deve ter no mínimo 4 commits médios. Se a branch ainda não tiver isso, não abra a PR: continue acumulando o trabalho ou avise o usuário e proponha juntar o conteúdo com outra branch relacionada. PRs pequenas demais aumentam o custo com GitHub Actions.
 - Todo título de PR segue o formato `Feature/Improvements/Documentation/Tests/DevOps - Título breve de 1 linha`, usando apenas a categoria que corresponde à PR.
-- Ao terminar, revise o seu próprio trabalho (diff, resultados dos testes e estas CONSTRAINTS) antes de commitar e entregar o resumo.
+- Ligue o Auto-Fix em toda PR que abrir: vincule a PR à sessão (`get_status` ou `bind_pr`) e ative o Auto-Fix com `set_monitor`. Se o Auto-Fix não estiver disponível no ambiente, avise o usuário no resumo.
+- Comunique-se com os outros devs e engenheiros (agentes e sessões) que trabalham neste mesmo projeto: mandem mensagens uns aos outros (ex.: `ListAgents` e `SendMessage`) para avisar o que cada um está fazendo, alinhar contratos e interfaces e ficar a par do trabalho dos demais. Não envie mensagens a sessões de outros projetos.
+- Antes de dar a task como concluída, valide uma a uma todas as regras deste arquivo (CONSTRAINTS e OUTPUT) contra o que você fez: diff, commits, nome da branch, PR e resultados dos testes. Corrija o que estiver violado e inclua no resumo uma checklist curta com o status de cada regra. Só então escreva a linha final.
 - Nunca mencione o Claude em commits, pull requests ou nomes de branch.
 - Nunca inclua `Co-Authored-By` ou atribuições semelhantes (ex.: "Generated with Claude Code") em commits, PRs ou branches.
 - Nomes de branch seguem o formato `tipo/nomeDescritivo`: `tipo` é `feat`, `imp`, `docs`, `testes`, `ci` ou `devops`, conforme a natureza da alteração, e `nomeDescritivo` fica em camelCase (ex.: `feat/login`, `imp/telaConfiguracoes`, `docs/arquitetura`).
