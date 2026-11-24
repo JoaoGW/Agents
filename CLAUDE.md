@@ -119,7 +119,7 @@ For a bug, reproduce it with a test when practical before fixing it.
 
 - Never read, print, commit, or modify secrets, `.env` files, tokens, or credentials.
 - Never commit, push, publish, deploy, create external resources, or update external services without explicit approval.
-  Exception: the role skills (`/backend`, `/frontend`, `/devops`, `/qa`, `/arquiteto`, `/estagiario`) commit, push their own branch and open pull requests with `gh` without asking, following the commit and PR rules in their CONSTRAINTS. Pushes to `main`/`master`, force-pushes and deploys remain blocked.
+  Exception: the role skills (`/backend`, `/frontend`, `/devops`, `/qa`, `/arquiteto`, `/estagiario`) commit, push their own branch and open pull requests with `gh` without asking, following the commit and PR rules in their CONSTRAINTS. Their branches start from an up-to-date `development`, which is the base of their pull requests and never receives direct commits. Pushes to `main`/`master`, force-pushes and deploys remain blocked.
 - Never use destructive commands such as recursive deletion, `git clean`, or `git reset --hard`.
 - Run a review or security audit when a change affects authentication, authorization, external input, API contracts, dependencies, or sensitive data.
 
